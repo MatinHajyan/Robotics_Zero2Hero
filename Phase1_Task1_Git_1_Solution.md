@@ -105,3 +105,134 @@ And compared to Github: Gitea has become noticably better over the last few year
 Github offers a large number of integrations with third party services (e.g., TravisCI, Jenkins, Sentry), while Gitea provides few such integrations by default
 
 # Challenge 4: Local vs. Remote Git
+
+![alt text](https://miro.medium.com/v2/resize:fit:640/format:webp/1*CGEmZKsnb3dC-nBkBneSNQ.png)
+
+Local Repository:
+A local repository is a copy of the entire project’s history and codebase that resides on a developer’s machine. When a developer initializes a local repository, Git sets up the necessary infrastructure to track changes, branches, and commits within the project.
+A remote repository serves as a central hub where developers can collaborate and share their work with others. It enables team members to synchronize their changes and provides backup and visibility for the project. 
+
+## What is meant by origin and upstream in Git?
+
+$
+# Challenge 5: Understanding Commits
+
+## What does committing in Git do?
+
+git commit creates a commit, which is like a snapshot of your repository. These commits are snapshots of your entire repository at specific times. You should make new commits often, based around logical units of change. Over time, commits should tell a story of the history of your repository and how it came to be the way that it currently is. Commits include lots of metadata in addition to the contents and message, like the author, timestamp, and more.
+
+
+## How is it different from saving a file?
+
+Great question! While **saving a file** and **committing in Git** may seem similar because both preserve changes, they operate at different levels and serve different purposes. Here’s the key difference:
+
+### **1. Saving a File (Regular Save)**
+- When you save a file in an editor, it simply updates that file on your local system.
+- The old version is overwritten unless you manually create a backup.
+- There is no built-in history of changes unless you use something like "Save As" with different filenames.
+
+### **2. Git Commit (Version Control)**
+- A **commit** in Git is like taking a "snapshot" of your project at a specific point in time.
+- Each commit records **what changed, when, and by whom**.
+- Commits are stored in Git’s history, meaning you can **revert to previous versions** if needed.
+- Each commit has a unique **hash ID**, allowing you to track changes over time.
+
+
+| Feature | Saving a File | Git Commit |
+|---------|-------------|-----------|
+| Purpose | Updates file on disk | Records a version in Git history |
+| Tracks changes? | No | Yes |
+| Can revert easily? | No | Yes |
+| Requires a message? | No | Yes (commit message) |
+| Scope | Single file | Entire project (staged changes) |
+
+In short: **Saving a file updates its contents, while a Git commit permanently records a version of the project in version control.** 🚀
+
+
+# Challenge 6: Branching in Git
+
+## What is a Git branch?
+
+🔹 A Git branch is a copy of your code where you can make changes without affecting the main version.
+🔹 You can create multiple branches to work on different features or fixes simultaneously.
+🔹 Once your work is done, you merge it back into the main branch.
+
+## How do branches help in team collaboration?
+
+✔ Parallel Work – Everyone works on different tasks without blocking each other.
+✔ Code Isolation – Prevents incomplete or buggy code from breaking the main project.
+✔ Safe Merging – Ensures tested, reviewed, and approved code gets into main.
+✔ Effortless Experimentation – Try new ideas without risks.
+✔ Efficient Bug Fixing – Hotfix branches allow quick bug resolution without disrupting ongoing work.
+
+## What is the difference between main, dev, and feature branches?
+
+1. **`main` branch** (or `master`) – The stable production-ready code.  
+2. **`dev` branch** – The main development branch where new features are integrated.  
+3. **`feature` branches** – Individual branches where new features are developed.
+   
+
+
+### **🛠 Summary: Differences at a Glance**
+
+| Branch | Purpose | Who Works Here? | When to Merge? |  
+|--------|---------|----------------|----------------|  
+| `main` | Production-ready, stable branch | Only after testing | After full testing & approval |  
+| `dev` | Development & testing before production | All developers merge features here | When a new release is ready |  
+| `feature-*` | Work-in-progress new features | Individual developers | After the feature is completed & tested |  
+
+---
+
+## Challenge 7: Merge Conflicts
+
+
+
+## What happens when changes collide in Git?
+## How do developers resolve merge conflicts?
+
+# Challenge 8: Forking in Git
+
+## What does forking a repository mean?
+## How does it differ from cloning?
+
+# Challenge 9: When to Commit?
+## When should you commit your changes?
+
+## How frequent should commits be?
+
+
+# Challenge 10: Common Git Commands
+
+**git init:** (create the local repository)
+
+**git clone:** When running git clone, what actually happens in the background is:
+
+   * git init
+    
+  *  git remote add origin ${URL}
+    
+  *  git pull
+
+----------------------------------------------------------------
+**git add:** The git add command adds a change in the working directory to the staging area. 
+
+**git commit:** The git commit command captures a snapshot of the project's currently staged changes.
+
+----------------------------------------------------------------
+
+**git push:** git push is most commonly used to publish an upload local changes to a central repository. 
+
+**git pull:** The git pull command is used to fetch and download content from a remote repository and immediately update the local repository to match that content. 
+
+-------------------------------------------------------------------
+**git branch:** Git branches are effectively a pointer to a snapshot of your changes. 
+
+**git checkout:** The git checkout command lets you navigate between the branches created by git branch
+
+**git merge:** Git merge will combine multiple sequences of commits into one unified history. In the most frequent use cases, git merge is used to combine two branches. 
+
+
+
+
+
+
